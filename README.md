@@ -66,8 +66,8 @@ Or see "Debian/Ubuntu" below to install and build from source (e.g., for ARM).
 For debian, use our deb repo. For buster:
 
 ```
-echo "deb https://github.com/MisterTea/debian-et/raw/master/debian-source/ buster main" | sudo tee -a /etc/apt/sources.list.d/et.list
-curl -sSL https://github.com/MisterTea/debian-et/raw/master/et.gpg | sudo tee /etc/apt/trusted.gpg.d/et.gpg >/dev/null
+echo "deb [signed-by=/etc/apt/keyrings/et.gpg] https://github.com/MisterTea/debian-et/raw/master/debian-source/ buster main" | sudo tee -a /etc/apt/sources.list.d/et.list
+curl -sSL https://github.com/MisterTea/debian-et/raw/master/et.gpg | sudo tee /etc/apt/keyrings/et.gpg >/dev/null
 sudo apt update
 sudo apt install et
 ```
